@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "ChatGPT Shortcut",
+    "version": "1.0",
+    "description": "Open a new chat on ChatGPT.com with a keyboard shortcut",
+    "permissions": ["tabs", "activeTab"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "commands": {
+      "open-new-chat": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+Y"
+        },
+        "description": "Open a new chat"
+      }
+    },
+    "host_permissions": [
+      "*://chatgpt.com/*"
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }
+  
